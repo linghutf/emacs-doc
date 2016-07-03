@@ -7,9 +7,9 @@
  - [X] 下载emacs系列/youtube/视频,H_2 O测试[1]
  - [X] 完成asio和lua socket的交互小程序
  - [ ] 转移文档、资料到移动硬盘
-** TODO 晚上 [66%]
+** TODO 晚上 [75%]
    DEADLINE: <2016-07-03 日>
  - [X] 上传Emacs文档
  - [ ] 检查服务器asio网络文档，上传，分类
- - [ ] 家人通话 
+ - [X] 家人通话 
  - [X] 配置win版本Emacs，移植到自己机器

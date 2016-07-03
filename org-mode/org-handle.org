@@ -1,20 +1,32 @@
 * 表示标题
-** Alt + RET 新建同级标题
-** Alt + <-/-> 提升/下降标题
-** Alt + 上/下 变换位置
-** Shift + Tab 展开/折叠列表
-* *TODO*
-** Ctrl-c Ctrl-t 将标题改为TODO/完成TODO/去除TODO
-** [ ] 建立标题子任务进度
-*** 上级总任务进度[/] /Ctrl-c/表示完成个数
-*** [%] /Ctrl-c/表示百分比
-*** 在任务上/Ctrl-c Ctrl-c/完成/未完成任务
-** 添加deadline Ctrl-c Ctrl-d
+| 按键    | 作用          |
+|---------+---------------|
+| M-RET   | 新建统计标题  |
+| M-<-/-> | 提升/降低标题 |
+| M-上/下 | 变换章节位置  |
+| S-TAB   | 展开/折叠章节 |
+
+* table
+| 按键    | 作用   |
+|---------+--------|
+| C-c C-c | 格式化 |
+| TAB     | 下一栏 |
+| S-TAB   | 上一栏 |
+
+* /TODO/
+| 按键    | 作用                    |
+|---------+-------------------------|
+| C-c C-t | TODO/DONE/取消 状态切换 |
+| [ ]     | 任务标记                |
+| C-c C-d | deadline日期            |
+
 * tag
-** 在任务上 Ctrl-c Ctrl-c 建立tag
-** [ number ] 插入脚注
-** \[\[contnet\]\] 插入外部链接
-** \<\<contnet\>\> 插入内部链接
+1) 在任务上 Ctrl-c Ctrl-c 建立tag
+#+BEGIN_QUOTE -n
+\<\<contnet\>\> 插入内部链接
+\[\[contnet\]\] 插入外部链接
+[ number ] 插入脚注
+#+END_QUOTE
 
 * 插入
 ** <s,<e 分别插入代码和example,支持模板如下:
@@ -28,12 +40,11 @@
 <h # html
 <a # ascii
 #+END_QUOTE
-#+BEGIN_VERSE
-明月几时有
-把酒问青天
-不知天上宫阙
-今夕是何年
-#+END_VERSE
+
+** 在代码区编写插入内容
+#+BEGIN_QUOTE
+M-x 选择edit-src-code
+#+END_QUOTE
 
 * 操作
 ** C-x u 选择撤销的时间点,C-g选定
@@ -63,7 +74,6 @@
 | M-m W H   | windmove-left                      | 当前窗口移到左边       |
 | M-m W J   | windmove-up                        | 当前窗口移到上边       |
 | M-m W K   | windmove-down                      | 当前窗口移到下边       |
-|           |                                    |                        |
 
 ** 移动,字符操作
 | 按键  | 作用               |
@@ -75,9 +85,15 @@
 | C-y   | 粘贴               |
 | C-/   | 撤销上一次操作     |
 | C-@   | 标记数据块         |
-| TAB   | table中下一个Cell  |
-| S-TAB | table中上一个Cell  |
-                             
+
+
 * 导出
-** Ctrl-x Ctrl-s 保存文件
-** Ctrl-c Ctrl-e 导出选择格式
+
+** 增加Markdown格式
+#+BEGIN_SRC lisp
+  (eval-after-load "org"
+    '(require 'ox-md nil t))
+#+END_SRC
+** C-x C-s 保存文件
+** C-c C-e 导出选择格式
+** C-x C-c 退出
