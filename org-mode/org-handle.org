@@ -1,0 +1,83 @@
+* 表示标题
+** Alt + RET 新建同级标题
+** Alt + <-/-> 提升/下降标题
+** Alt + 上/下 变换位置
+** Shift + Tab 展开/折叠列表
+* *TODO*
+** Ctrl-c Ctrl-t 将标题改为TODO/完成TODO/去除TODO
+** [ ] 建立标题子任务进度
+*** 上级总任务进度[/] /Ctrl-c/表示完成个数
+*** [%] /Ctrl-c/表示百分比
+*** 在任务上/Ctrl-c Ctrl-c/完成/未完成任务
+** 添加deadline Ctrl-c Ctrl-d
+* tag
+** 在任务上 Ctrl-c Ctrl-c 建立tag
+** [ number ] 插入脚注
+** \[\[contnet\]\] 插入外部链接
+** \<\<contnet\>\> 插入内部链接
+
+* 插入
+** <s,<e 分别插入代码和example,支持模板如下:
+#+BEGIN_QUOTE
+<s # src code
+<e # example
+<q # quote
+<v # verse
+<c # center
+<l # latex
+<h # html
+<a # ascii
+#+END_QUOTE
+#+BEGIN_VERSE
+明月几时有
+把酒问青天
+不知天上宫阙
+今夕是何年
+#+END_VERSE
+
+* 操作
+** C-x u 选择撤销的时间点,C-g选定
+** 鼠标选中区域,C-S-2，ALT-w 复制,C-y粘贴
+
+| 按键      | 命令                               | 作用                   |
+|-----------+------------------------------------+------------------------|
+| C-x 2     | split-window-vertical              | 垂直拆分窗口           |
+| C-x 3     | split-window-horizon               | 水平拆分窗口           |
+| C-x o     | other-window                       | 选择下一个窗口         |
+| C-M-v     | scroll-other-window                | 滚动到下一个窗口       |
+| C-x 4 b   | switch-to-buffer-other-window      | 在另外一个窗口打开缓冲 |
+| C-x 4 C-o | display-buffer                     | 在另一个窗口显示缓冲   |
+| C-x 4 f   | find-file-other-window             | 在另外一个窗口打开文件 |
+| C-x 4 d   | fired-other-window                 | 在另一个窗口打开文件夹 |
+| C-x 4 m   | mail-other-window                  | 在另一个窗口写邮件     |
+| C-x 4 r   | find-file-read-only-other-window   |                        |
+| C-x 0     | delete-window                      | 关闭当前窗口           |
+| C-x 1     | delete-other-window                | 关闭其它窗口           |
+| C-x 4 0   | kill-buffer-and-windows            | 关闭当前缓冲和窗口     |
+| C-x ^     | enlarge-window                     | 增高当前窗口           |
+| C-x {     | shrink-window-horizon              | 当前窗口变窄           |
+| C-x }     | enlarge-window-horizon             | 当前窗口变宽           |
+| C-x -     | shrink-window-if-large-then0buffer | 如果窗口比缓冲大就缩小 |
+| C-x +     | talance-windows                    | 所有窗口一样高         |
+| M-m W L   | windmove-right                     | 当前窗口移到右边       |
+| M-m W H   | windmove-left                      | 当前窗口移到左边       |
+| M-m W J   | windmove-up                        | 当前窗口移到上边       |
+| M-m W K   | windmove-down                      | 当前窗口移到下边       |
+|           |                                    |                        |
+
+** 移动,字符操作
+| 按键  | 作用               |
+|-------+--------------------|
+| C-a   | 行首               |
+| C-e   | 行尾               |
+| C-k   | 剪切到行尾         |
+| C-d   | 删除光标后一个字符 |
+| C-y   | 粘贴               |
+| C-/   | 撤销上一次操作     |
+| C-@   | 标记数据块         |
+| TAB   | table中下一个Cell  |
+| S-TAB | table中上一个Cell  |
+                             
+* 导出
+** Ctrl-x Ctrl-s 保存文件
+** Ctrl-c Ctrl-e 导出选择格式

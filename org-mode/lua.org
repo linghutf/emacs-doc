@@ -1,0 +1,69 @@
+#+OPTIONS: toc:nil
+* lua使用手册
+
+** *无local声明都是全局，包括函数*
+** 基本类型
+*** number
+1) double,int都属于number
+2) tonumber(str)转化
+*** string
+1) sub(str,start,end),第三参数不是len
+2) string *append* 是通过 #..#
+3) string '...'连接字符串
+4) sub(str,start-pos,end-pos)取得sub字符串
+5) 如同普通"table"遍历，位置从1开始，而不是0
+*** table
+1) for k,v in ipairs(table)遍历
+2) table[k]=(table[k]+1 or 0)遍历计数
+3) Example
+#+BEGIN_SRC lua
+-- 只对string key有效
+local t = {host='127.0.0.1,port=9876}
+-- 通用写法
+local t= {}
+t[1]=2
+t['host']=2
+-- 对象函数调用
+t:connect()
+#+END_SRC
+
+#+BEGIN_SRC cpp
+  #include <iostream>
+  #Include <string>
+
+  int main()
+  {
+    std::cout<<"sitl"<<std::endl;
+    return 0;
+  }
+#+END_SRC
+i** I/O
+*** 读取/写入
+1) io.read()读取一行数据
+2) io.read('*n')读取数字,io.read('*s')读取字符串
+3) io.write(arg1,arg2,...)写入不带换行，print(arg1,arg2,...)自带换行,均是排版
+*** 示例
+1) 读取内容
+#+BEGIN_SRC
+*** lua -n -t
+fp = io.open(filename,'r')
+line = fp:read()
+while line ~= nil do
+    -- some code
+done
+fp:close()
+#+END_SRC
+2) 写入内同
+#+BEGIN_SRC cpp
+
+
+#+END_SRC
+3) lua清除元素[1],使用nil[2]
+** 其他参考
+[[http://www.cnblogs.com/qlwy/archive/2012/06/15/2551034.html][org-mode语法]]
+[[http://ww4.sinaimg.cn/large/0065hPzhgw1f5ffmqeq2zj30go0ci3zt.jpg][guangu]]
+
+#+OPTIONS: toc:nil
+* Footnotes
+[1] clear the element
+[2] nil相当于C语言的null,但是可以表示非指针
