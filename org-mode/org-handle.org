@@ -122,9 +122,10 @@ M-x 选择edit-src-code
 
 ** 图片、文件链接
 
-*** [[file:lua.org][lua学习文档]]
+*** [[file:lua.org][学习文档]]
 
-*** [[https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwiqkpiT99nNAhUFTY8KHZGuBGwQjRwIBA&url=http%253A%252F%252F125.88.200.103%252Fi%253Fsrc%253Drel%2526q%253D%2525E7%25259C%25258B%2525E7%25259D%252580%2525E4%2525BD%2525A0%2525E5%252593%2525AD%2525E6%25259A%2525B4%2525E6%2525BC%2525AB%2525E8%2525A1%2525A8%2525E6%252583%252585&psig=AFQjCNHZj1wqA1u8RnQk840eHeN5tb_qZA&ust=1467725889172313][图片测试]]
+*** [[http://cupic.img168.net/bbsfile/forum/month_1105/110506105205f18f5c152d2772.png][图片测试]]
+
 * 操作
 ** C-x u 选择撤销的时间点,C-g选定
 ** 鼠标选中区域,C-S-2，M-w 复制,C-y粘贴
@@ -181,8 +182,7 @@ M-x 选择edit-src-code
 #+END_QUOTE
 
 * 技巧
-** [[http://aandds.com/Tool-orgmode.html#sec-14][skill list
-]]
+** [[http://aandds.com/Tool-orgmode.html#sec-14][skills]]
 ** "C-j","C-m"换行实现不同级缩进
 ** 段落使用"\\"，或者两个空行分割
 * Footnotes
