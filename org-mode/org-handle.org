@@ -1,5 +1,16 @@
+#+TITLE: org-mode操作
+#+AUTHOR: linghutf
+#+OPTIONS:num:t toc:t
+#+STARTUP: indent
+
 * 文档元数据
-** 防止符号转义可以使用=/这是斜体测试/=
+
+** 防止符号转义可以元字符
+
+*** [[http://orgmode.org/worg/org-symbols.html][元字符表
+]]
+*** \div这是斜体测试\div
+
 #+BEGIN_EXAMPLE
 #+TITLE: title
 #+AUTHOR: linghutf
@@ -14,6 +25,7 @@
     ^:{}              ;;转义成{}，例如12^24要写成12[34]才是幂的含义
 #+END_EXAMPLE
 * 标题
+
 | 按键      | 作用               |
 |-----------+--------------------|
 | M-RET     | 新建同级标题       |
@@ -25,9 +37,7 @@
 | S-TAB     | 展开/折叠章节      |
 | C-c *     | 本行设为标题/正文  |
 | C-c C-w   | 子树移到另一标题处 |
-|           |                    |
 
-** 
 * table
 | 按键     | 作用     |
 |----------+----------|
@@ -46,9 +56,10 @@
 | M-S-上/下 | 删除/插入行                |
 | C-c -     | 添加水平分割线             |
 | C-c RET   | 添加水平分割线并跳到下一行 |
-| C-c *     | 选择排序方式                     |
+| C-c *     | 选择排序方式               |
 
 * /TODO/
+
 | 按键    | 作用                    |
 |---------+-------------------------|
 | C-c C-t | TODO/DONE/取消 状态切换 |
@@ -77,6 +88,7 @@
 | +  或 -  | a+b       | 同时含有a和b标签 |
 | -        | a-b       | 有a没有b         |
 | \vert[fn:2]    | a \vert b | 有a或者b         |
+
 * 脚注
 ** 方括号+数字,方括号+fn+数字
 ** C-c C-x f 插入脚注,aas[fn:1]
@@ -108,6 +120,11 @@ c  语言
 M-x 选择edit-src-code
 #+END_QUOTE
 
+** 图片、文件链接
+
+*** [[file:lua.org][lua学习文档]]
+
+*** [[https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwiqkpiT99nNAhUFTY8KHZGuBGwQjRwIBA&url=http%253A%252F%252F125.88.200.103%252Fi%253Fsrc%253Drel%2526q%253D%2525E7%25259C%25258B%2525E7%25259D%252580%2525E4%2525BD%2525A0%2525E5%252593%2525AD%2525E6%25259A%2525B4%2525E6%2525BC%2525AB%2525E8%2525A1%2525A8%2525E6%252583%252585&psig=AFQjCNHZj1wqA1u8RnQk840eHeN5tb_qZA&ust=1467725889172313][图片测试]]
 * 操作
 ** C-x u 选择撤销的时间点,C-g选定
 ** 鼠标选中区域,C-S-2，M-w 复制,C-y粘贴
@@ -148,9 +165,7 @@ M-x 选择edit-src-code
 | C-/   | 撤销上一次操作     |
 | C-@   | 标记数据块         |
 
-
 * 导出
-
 ** 增加Markdown格式
 #+BEGIN_SRC lisp
   (eval-after-load "org"
@@ -159,11 +174,17 @@ M-x 选择edit-src-code
 ** C-x C-s 保存文件
 ** C-c C-e 导出选择格式
 ** C-x C-c 退出
+
 * 分割线
 #+BEGIN_QUOTE
 ----- 5条短线
 #+END_QUOTE
 
+* 技巧
+** [[http://aandds.com/Tool-orgmode.html#sec-14][skill list
+]]
+** "C-j","C-m"换行实现不同级缩进
+** 段落使用"\\"，或者两个空行分割
 * Footnotes
 
 [fn:2] 表格中使用脚注
